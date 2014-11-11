@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>E-standards for Training Accessible HTML5 Media Player</title>
+
+
+<!-- The following links to style sheets and javascript are required for the player to work-->
+<link rel="stylesheet" type="text/css" href="css/ui-lightness/jquery-ui-1.10.1.custom.min.css">
+<link rel="stylesheet" type="text/css" href="css/videoplayer.css">
+<link rel="stylesheet" type="text/css" href="css/print.css" media="print">
+<script type="text/javascript" src="js/swfobject/swfobject.js"></script>
+<script src="js/jquery-1.11.1.min.js" type="text/javascript" language="javascript"></script>
+<script src="js/jquery-ui-1.10.1.custom.min.js" type="text/javascript" language="javascript"></script>
+<script src="js/jquery.fullscreen-min.js" type="text/javascript" language="javascript"></script>
+<script src="js/access.js" type="text/javascript" language="javascript"></script>
+
+
+<!-- You must retain this comment.
+Developed by Sean Norrey from Kangan Institute.
+Funded by the <a href="http://flexiblelearning.net.au">National VET E-learning Strategy</a> through the New Generation Technologies  business activity's <a href="http://e-standards.flexiblelearning.net.au/research/funded_projects/emerging_technology_trials/index.php">Emerging Technology Trials</a> (2012-2013).
+&copy; Commonwealth of Australia 2013, Licensed under <a href="https://creativecommons.org/licenses/by-sa/3.0/au/">Creative Commons Attribution-ShareAlike 3.0 Australia License.</a>
+-->
+
+<!-- optional style sheet and favicon -->
+<link rel="stylesheet" type="text/css" href="css/your-site-css-file.css">
+<link rel="shortcut icon" href="../../images/favicon.ico">
+
+
+</head>
+
+<body>
+<!-- wrapper is used for layout purposes on this page only, it is not needed in your site. Only the <div class="accessPlayer", video and audio tags are required, plus the JavaScript and CSS files in the <head> and the external files in their existing locations relative to this file -->
+<div id="wrapper">
+
+
+
+<!-- You can delete this 1-->
+<h1><a href="http://e-standards.flexiblelearning.net.au"><img src="images/eft-reverse.png" alt="E-standards for Training" width="154" height="33"></a> Accessible HTML5 Media Player</h1>
+
+<p>We <a href="mailto:e-standards@flexiblelearning.net.au">welcome your feedback</a>, including a better name! </p>
+
+<h2>Elephants Dream (Video)</h2>
+<p>The following demonstrates video hosted on YouTube playing through our player instead of the YouTube player, with Closed Captions in a choice of two languages and an optional Audio Description.</p> 
+<!-- end You can delete this 1-->
+
+<p><a href="video/subs/elephants_dream_en.txt">Transcript for following video.</a></p>
+<!-- YOU NEED THIS SECTION  if you want to implement a YouTube video. You will have to change the paths to your files as described in the comments below.  -->
+<div class="accessPlayer" role="application" tabindex="0">
+	<!-- CHANGE THE TITLE ATTRIBUTE IN THE LINE BELOW TO BRIEFLY DESCRIBE YOUR VIDEO -->
+	<video width="100%" height="100%" tabindex="0" poster="images/poster-frame.png" title="Elephants Dream YouTube video" preload> 
+		<!-- CHANGE THE SRC ATTRIBUTE IN THE LINE BELOW TO YOUR YOUTUBE LINK --> 
+		<source src="https://www.youtube.com/watch?v=TLkA0RELQ1g" type="video/youtube" />
+		<!-- CHANGE THE SRC ATTRIBUTE TO THE LOCATION OF YOUR CLOSED CAPTION VTT FILE OR FILES. THIS EXAMPLE HAS CLOSED CAPTIONS FOR TWO LANGUAGES -->
+	    <track src="video/subs/elephants_dream_en.vtt" kind="subtitle" srclang="en" label="English" />                      
+	    <track src="video/subs/elephants_dream_fr.vtt" kind="subtitle" srclang="fr" label="Fran&#231;ais" />                                             
+	</video> 
+ 
+	<!-- THE FOLLOWING ELEMENT CONTAINS YOUR AUDIO DESCRIPTION FILES -->    
+	<audio controls>
+		<!-- CHANGE THE SRC ATTRIBUTE TO THE LOCATION OF YOUR AUDIO DESCRIPTION OGG FILE -->
+	    <source src="video/elephants_dream_ad_en.ogg" type="audio/ogg">
+	    <!-- CHANGE THE SRC ATTRIBUTE TO THE LOCATION OF YOUR AUDIO DESCRIPTION MP3 FILE -->
+	    <source src="video/elephants_dream_ad_en.mp3" type="audio/mpeg">
+	    Your browser does not support the audio element.
+	</audio>
+</div>
+<!-- END YOU NEED THIS SECTION FOR YOUTUBE -->
+<p>&copy; Copyright 2006, Blender Foundation / Netherlands Media Art Institute / <a href="http://www.elephantsdream.org">www.elephantsdream.org</a>, <br />
+use of the Audio Description kindly permitted by its creator, Silvia Pfeiffer.</p>
+
+<hr />
+<h2>It's Your Birthday (Audio)</h2>
+
+<p>The following demonstrates the player controls to play just audio. Closed Captions are available, offering alternative language options.</p> 
+<div class="accessPlayer" role="application">
+	<audio controls>
+		<source src="video/Its_Your_Birthday.ogg" type="audio/ogg">                                                                               
+		<source src="video/Its_Your_Birthday.mp3" type="audio/mpeg">
+		<track src="video/subs/its_your_birthday_en.vtt" kind="subtitle" srclang="en" label="English" />
+		<track src="video/subs/its_your_birthday_fr.vtt" kind="subtitle"  srclang="fr" label="Fran&#231;ais" />
+        Your browser does not support the audio element.
+    </audio>
+</div>
+<p><a rel="license" href="http://creativecommons.org/licenses/by/3.0/"><img src="http://i.creativecommons.org/l/by/3.0/88x31.png" alt="CC-BY"/></a> It's Your Birthday! by Monk Turner + Fascinoma is licensed under a Creative Commons Attribution License.</p>
+
+<hr />
+
+<h2>All about addition (Video)</h2>
+<p>Video has Flash fall back for older browsers</p>
+<div class="accessPlayer" role="application" tabindex="0">
+    <video width="100%" height="100%" tabindex="0" poster="images/poster-frame.png" title="All about addition." preload>  
+        <source src="video/addition.mp4" type="video/mp4" />                                                                              
+        <source src="video/addition.webm" type="video/webm" />                                                                         
+        <track src="video/subs/addition.vtt" kind="subtitle" />                                                                                  
+        <div class="FlashPlayer">
+            <p class="videoPlayerLocation">flashplayer/videoplayer.swf</p>
+            <p class="videoPlayerControlsLocation">flashplayer/controls.swf</p>
+            <p class="videoSourceFileLocation">../video/addition.mp4</p>                                                                        	
+            <p class="videoCaptionsFileLocation">video/subs/addition.xml</p>                                                                     	
+            <p class="videoControlsColour">#262626</p>
+        </div> 
+    </video> 
+</div>
+
+
+<hr />
+
+<h2>Big Buck Bunny (Video)</h2>
+<p>A YouTube video without subtitles (or dialog)</p>
+
+<div class="accessPlayer" role="application" tabindex="0">
+    <video width="100%" height="100%" tabindex="0" poster="images/poster-frame.png" title="This video demonstrates incorporating a YouTube video without subtitles" preload>  
+        <source src="https://www.youtube.com/watch?v=YE7VzlLtp-4" type="video/youtube" />   
+    </video> 
+</div>
+    <p>Big Buck Bunny by <a href="http://www.blender.org/">BlenderFoundation</a>, licensed under the Creative Commons Attribution license</p>
+    <p><a href="https://www.youtube.com/user/BlenderFoundation">Blender Foundation YouTube Channel</a></p>
+
+
+<!-- end You need this section -->
+<hr />
+<!-- You can delete this 2-->
+<p>Developed by Sean Norrey from Kangan Institute.</p>
+<p>Funded by the <a href="http://flexiblelearning.net.au">National VET E-learning Strategy</a> through the New Generation Technologies  business activity's <a href="http://e-standards.flexiblelearning.net.au/research/funded_projects/emerging_technology_trials/index.php">Emerging Technology Trials</a> (2012-2013).</p>
+<p>&copy; Commonwealth of Australia 2013, Licensed under <a href="https://creativecommons.org/licenses/by-sa/3.0/au/">Creative Commons Attribution-ShareAlike 3.0 Australia License.</a> </p>
+<!-- End You can delete this 2-->
+
+</div>
+</body>
+</html>

@@ -1,0 +1,261 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* 
+- These CSS classes are specifically for the accessible video player.
+- Changing the classes will not effect the functions of the video player.
+- Try your own designs using the classes below as a template.
+- The video controls have a transparent background.
+- The controls come in black or white, exchange black for white below to see the difference
+*/
+
+/*Container for video and video controls */
+.accessPlayer{
+	position:relative;	
+	width:720px;
+	height:400px;
+	/*margin bottom 50px is approx the size of the vidControls*/
+	margin-bottom:50px;
+}
+
+.vidControls{
+	position:relative;
+	background-color:#333;
+	background-image:url(controls/black/controls-bg.png);
+	clear:both;
+	text-align:center;
+}
+
+.vidControls button{
+	border:none;
+	text-indent:-9999px;
+	background-color:transparent;
+	cursor:pointer;
+	width:40px;
+	height:40px;
+}
+
+/*Buttons - video controls*/
+.vidPlayPause{
+	background-image:url(controls/black/play-black.png);
+}
+
+.vidControls button:hover, .vidControls button:focus{
+	background-color:#CDCDCD;	
+}
+
+.paused{
+	background-image:url(controls/black/pause-black.png);
+}
+
+.vidStop{
+	display:none;
+	background-image:url(controls/black/stop-black.png);
+}
+
+.vidStepForward{
+	background-image:url(controls/black/step-forward-black.png);
+}
+
+.vidStepBackward{
+	background-image:url(controls/black/step-back-black.png);
+}
+
+.vidVolUp{
+	background-image:url(controls/black/volume-up-black.png);
+}
+
+.vidVolDown{
+	background-image:url(controls/black/volume-down-black.png);
+}
+
+.vidFullscreen{
+	background-image:url(controls/black/fullscreen-black.png);
+	background-position:top;
+}
+
+.minimiseScreen{
+	background-position:bottom;
+}
+
+.ShowCaptions{
+	background-image:url(controls/black/cc-black.png);
+}
+
+.ShowSettings{
+	background-image:url(controls/black/cc-settings-black.png);
+}
+
+.AudioDescriptionTrack{
+	background-image:url(controls/black/audio-desc-black.png);
+}
+
+.buttonHighlightColour{
+	background-image:url(controls/black/audio-desc-black-on.png);
+}
+
+.accessPlayer .vidControls .slider{
+	width:240px;
+	display:inline-block;
+	margin:0px 10px;
+}
+
+/*sets the height of the slider (scrub bar)*/
+.ui-slider-horizontal{height:8px;}
+/*replaces the standard slider (scrub bar) handle*/
+.ui-slider-horizontal .ui-state-default {background: transparent url(controls/black/slider-handle-black.png) no-repeat scroll 50% 50%; border:none}
+/*an addition to the jQuery UI classes that changes the style of the slider (scrub bar) itself */
+.ui-slider-background-colour{ background: #7c7c7c; border:1px solid #343434; }
+/*provides focus state to the slider handle*/
+.ui-slider-horizontal .ui-state-default:focus{background-color:#CDCDCD; height:40px; top:-15px;}
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default{
+	color:#333;
+}
+
+.ui-state-default .ui-icon{
+	background-image:url(ui-lightness/images/ui-icons_222222_256x240.png);
+}
+
+
+.ui-widget-header{
+	border:none;
+	background-color:#333;
+	background-image:none;
+	color:#FFF;
+}
+
+.positionSubtitlesFullScreen{
+	bottom:100px !important;
+	left:200px;
+	width:80%;
+	height:20%;
+}
+
+.positionSubtitlesNormalScreen{
+	top:100px !important;
+	left:200px;
+	width:40%;
+	height:10%;
+}
+
+.FullScreen{height:100% !important; width:100% !important;}
+
+.positionControlsFullScreen{position:absolute; bottom:0px;}
+
+.SubtitleContainer{
+	display:none;
+	color:#FFF;	
+	text-align:left;	
+	position:absolute;
+	margin:0px auto;
+	left:150px;
+	bottom:10px;
+	height:60px;
+	width:400px;
+}
+
+.showAudioSubtitles{
+	padding-top:80px;
+}
+
+#ChooseFont{font-size:1em; display:inline;}
+
+.FontSize{float:left; display:inline;}
+
+#CaptionSettings{display:none; min-height:360px}
+
+.ui-dialog{
+	height:600px;
+}
+.SelectLanguage{
+	clear:both;
+	padding-top:5px;	
+}
+
+.accessPlayer audio{display:none}
+			
+.SubtitleTextBG, .SubtitleText{
+	position:absolute;
+	height:100%;
+	width:100%;
+}
+			
+.SubtitleTextBGEx, .SubtitleTextEx{
+	position:absolute;
+	height:50px;
+	width:400px;
+	text-align:center;
+	margin:15px 0px;
+	color:white;
+}
+.SubtitleText{
+	margin:15px 0px 5px 0px;
+	padding:0px 100px 0px 10px;
+}			
+			
+.SubtitleTextBG, .SubtitleTextBGEx{
+	filter: alpha(opacity=75);
+	opacity: 0.75;
+	background-color:#000;
+}
+
+.SubtitleContainerEx{
+	position:relative;	
+	height:0px;
+	clear:both;
+}
+		
+button.picker, button.pickerBG{
+	float:left;/**/
+	width:20px;
+	height:20px;
+	margin:2px;/**/
+	font-size:.1em;
+	
+	border:1px solid #999;/*none;*/
+	text-indent:-9999px;
+}
+		
+.ColourSelector{
+	padding:1px;
+	color:#333;
+	width:280px;
+	height:95px;
+		
+}
+			
+.pickerSetBlackWhite, .pickerSetWhiteBlack, .pickerSetBlackYellow, .pickerSetBlueWhite{
+	float:left;
+	width:50px;
+	height:50px;
+	margin:1px;
+	font-size:1em;	
+	text-align:center;
+	/*border:1px solid black;*/
+}
+		
+.pickerSetBlackWhite{background-color:Black; color:White}
+.pickerSetWhiteBlack{background-color:White; color:Black}
+.pickerSetBlackYellow{background-color:Black; color:Yellow}
+.pickerSetBlueWhite{background-color:Blue; color:White}
+
+.TransparencySettings{clear:both; padding:15px 0px 0px 0px;}
+
+.accessibleBorder{
+	outline:solid;
+	outline-width:2px;
+	padding:2px;
+	outline-color:#000;
+}
+
+.FontType{margin:15px 0px}
+
+.FlashPlayer{display:none;}
+
+.transcript{
+	width:100%;
+	display:none;
+}
+.imagesForTranscript{display:none;}
+.transcript img{display:block;}

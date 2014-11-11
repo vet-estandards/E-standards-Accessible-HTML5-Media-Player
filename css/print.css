@@ -1,0 +1,11 @@
+.transcript{
+	width:100%;
+	display:block;
+}
+.transcript img{display:block;}
+.accessPlayer video, .accessPlayer .YouTubeBlock, .accessPlayer .object, .vidControls, SubtitleContainer{display:none;}
+.accessPlayer{
+	position:static;	
+	margin-top:50px;
+	margin-bottom:200px;
+}

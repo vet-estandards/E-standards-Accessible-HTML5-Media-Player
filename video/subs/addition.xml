@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tt xml:lang="en" xmlns="http://www.w3.org/2006/04/ttaf1"
+    xmlns:tts="http://www.w3.org/2006/04/ttaf1#styling">
+  <head>
+    <styling>
+    </styling>
+  </head>
+  <body>
+   <div xml:lang="en">
+      <p begin=".5" dur="2.5">Ok, we're going to try to add two numbers together, </p>
+      <p begin="3" dur="9">these numbers are going to be something like this; 486 plus 123, pretty simple.</p>
+      <p begin="12" dur="5">First of all we start with the units column, so we go six and three is nine.</p>
+      <p begin="17" dur="3">Eight and two is ten. </p>
+      <p begin="20" dur="4">Now that produces a complication, we can’t put ten in here so we put a zero there </p>
+      <p begin="24" dur="4">and we carry the one over to the next column.</p>
+      <p begin="28" dur="4">So then we’ve got four plus one is five plus that one we carried,</p>
+      <p begin="32" dur="4">gives us six.</p>
+    </div>
+  </body>
+</tt>

@@ -1,0 +1,17 @@
+body{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:76%;
+	background-color:#E2F8FE;
+	margin:0px;
+}
+
+#wrapper{
+	margin:0px 0px 20px 20px;
+	padding:15px;
+	width:740px;
+	background-color:#FFF;
+	border-left:1px solid #CDCDCD;
+	border-right:1px solid #CDCDCD
+}
+
+.important{color:#FF6600}
