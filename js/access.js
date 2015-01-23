@@ -95,7 +95,7 @@ function accessPlayer(setup){
 			return $.ajax({
 					type: "GET",
 					url: subs,
-					//dataType: "html",
+					mimeType: /\.vtt$/.test(subs) ? "text/vtt" : "text/plain",
 					success: function(xml){
 						//When running the local version of the site Firefox will get to this point in the code and Flash/HTML will not initialise. Below is a workaround.
 						//If the xml document does not have content and returns [object XMLDocument] put the Flash version on the page.
